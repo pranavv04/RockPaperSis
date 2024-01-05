@@ -27,17 +27,23 @@ function userClickeddd(){
 let Modes = document.querySelector('.modes');
 let darkModes = '<ion-icon name="moon-outline"></ion-icon>'
 
-let userWinner= 0;
-let computerWinner = 0;
-let ties = 0;
+
+const values = {
+    userWinner:0,
+    ties:0,
+    computerWinner:0
+};
+// let userWinner= 0;
+// let computerWinner = 0;
+// let ties = 0;
 let popup = document.querySelector('.popup')
 
 function determineWinner(){
     if(userWin > computerclicked){
         console.log("User win");
        
-        userWinner++;
-        document.querySelector('.uwin').textContent= `You won : ${userWinner}`;
+        values.userWinner++;
+        document.querySelector('.uwin').textContent= `You won : ${values.userWinner}`;
        
         popup.style.visibility = 'visible';
         
@@ -57,8 +63,8 @@ function determineWinner(){
     else if(computerclicked > userWin){
 
         console.log("computer nigga won");
-        computerWinner++;
-        document.querySelector('.compwin').textContent = `Computer won: ${computerWinner}`;
+        values.computerWinner++;
+        document.querySelector('.compwin').textContent = `Computer won: ${values.computerWinner}`;
       
         popup.style.visibility = 'visible';
        
@@ -77,8 +83,8 @@ function determineWinner(){
      }
     else{
         console.log("tie");
-        ties++;
-        document.querySelector('.nones').textContent = `Tie : ${ties}`
+        values.ties++;
+        document.querySelector('.nones').textContent = `Tie : ${values.ties}`
         popup.style.visibility = 'visible';
       
 
@@ -129,3 +135,13 @@ Modes.addEventListener('click',function(){
     }
 })
  
+let resetbtn = document.querySelector('.resetbtn');
+function resets(){
+  values.computerWinner = 0;
+  values.userWinner = 0;
+  values.ties=0;
+  document.querySelector('.compwin').textContent = `Computer won: ${values.computerWinner}`;
+  document.querySelector('.nones').textContent = `Tie : ${values.ties}`;
+  document.querySelector('.uwin').textContent= `You won : ${values.userWinner}`;
+
+}

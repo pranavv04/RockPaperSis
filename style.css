@@ -106,3 +106,17 @@ box-shadow: 0px 2px 25px 2px rgb(9, 125, 241);
     background:none;
     cursor: pointer;
 }
+
+.resetbtn{
+    position: absolute;
+    height: 30px;
+    width: 80px;
+    color:white;
+    background-color: rgb(9, 125, 241);
+    border: none;
+    border-radius: 7px;
+    font-weight: 700;
+    top: 80%;
+    left: 49%;
+    cursor: pointer;
+}   
