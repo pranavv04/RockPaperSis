@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Sissor</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>  
+    <h1 class="Heading">Rock Paper Sissors</h1>
+    <button class="modes"><ion-icon name="contrast-outline"></ion-icon></button>
+
+
+    <div class="buttons">
+        <h1 onclick="userClicked()" class="Buttonzz one">✌️</h1>
+        <h1 onclick="userClickedd()" class="Buttonzz two">🖐️</h1>
+        <h1 onclick="userClickeddd()" class="Buttonzz three">👊</h1>
+    </div>
+    <div class="popup">
+        <button  onclick="closer()" class="close">X</button>
+        <h2 class="nigs">You WON</h2>
+        <p class="selection"></p>
+    </div>
+ 
+    <div class="score">
+        <h3 class="uwin">Your Points : </h3>
+        <h3 class="compwin">Computer Points : </h3>
+        <h3 class="nones">Tie : </h3>
+    </div>
+  <script src="./script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
